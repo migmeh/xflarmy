@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": "dist/Angular",
+    "rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    } ],
+
+
+    "headers": [ {
+
+      "source": "**/*.@(jpg|psd)",
+      "headers": [ {
+        "key": "Access-Control-Allow-Origin",
+        "value": "*"
+      } ]
+    }]
+  }
+}
+
+
