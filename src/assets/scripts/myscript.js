@@ -504,7 +504,8 @@ var game = (function () {
     bufferctx.font="bold 35px Arial";
     bufferctx.fillText("GAME OVER", canvas.width / 2 - 100, canvas.height / 2);
 
-
+    document.getElementById("audioUno").pause();
+    document.getElementById("audioDos").pause();
     document.getElementById("audios").innerHTML="";
   }
 
@@ -516,7 +517,7 @@ var game = (function () {
     bufferctx.fillText("LIVES: " + player.life + " x 5", canvas.width / 2 - 100, canvas.height / 2 + 30);
     bufferctx.fillText("TOTAL: " + getTotalScore(), canvas.width / 2 - 100, canvas.height / 2 + 60);
 
-
+    document.getElementById("audioDos").pause();
     document.getElementById("audios").innerHTML="";
 
 
@@ -599,7 +600,7 @@ var game = (function () {
     if (evil instanceof FinalBoss) {
       background = bgBoss;
 
-
+      document.getElementById("audioUno").pause();
       document.getElementById("audioDos").play();
     } else {
       background = bgMain;
