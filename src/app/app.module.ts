@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoonshotComponent } from './components/moonshot/moonshot.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { BarComponent } from './components/bar/bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoonshotComponent,
-    InicioComponent
+    InicioComponent,
+    BarComponent
   ],
   imports: [
     BrowserModule,
