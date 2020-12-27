@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MoonshotComponent } from './components/moonshot/moonshot.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { BarComponent } from './components/bar/bar.component';
+import { ChessComponent } from './components/chess/chess.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoonshotComponent,
     InicioComponent,
-    BarComponent
+    BarComponent,
+    ChessComponent
   ],
   imports: [
     BrowserModule,

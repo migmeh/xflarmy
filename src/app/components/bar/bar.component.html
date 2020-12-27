@@ -15,35 +15,10 @@
 
 
 
+<div id="mycookie" (click)="aceptCookie()" class=" alert negro-alert alert-warning alert-dismissible fade show" role="alert" data-dismiss="alert" aria-label="Close">
+
+  <p><strong>Attention: </strong>This website uses its own and third-party cookies to offer a better service.<br /> If you continue browsing we consider that you accept its use and you affirm that you are over 18 years of age
+  </p>
 
 
-
-<!-- Modal -->
-<div class="cookie-modal modal fade" id="cookies" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="cookie-modal-content modal-content">
-      <div class="modal-header">
-
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body" style="font-size: 18px;">
-
-        <div class="cookie"><img src="/assets/inicio/oreo.png" class="imagen"/></div>
-        <div class="cookieInfo"><strong style="color:#777777;">This website uses cookies</strong> for analysis and personalized content.
-          Click on the Accept button if you agree and are at least <strong style="color:#777777;">18 years of age.</strong>
-         </div>
-        <div class="s"></div>
-
-
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-        <button type="button" (click)="aceptCookie()"  class="btn btn-light" data-dismiss="modal">Accept</button>
-      </div>
-    </div>
-  </div>
 </div>

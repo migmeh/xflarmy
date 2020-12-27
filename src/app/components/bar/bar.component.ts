@@ -20,9 +20,9 @@ export class BarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-if(localStorage.getItem("mycookie") != "yes"){
-  $('#cookies').modal('show');
-}
+    if(localStorage.getItem("mycookie") === "yes"){
+      $("#mycookie").hide();
+    }
 
   }
 
