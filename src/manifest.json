@@ -1,0 +1,14 @@
+{
+  "name": "xflarmy.com",
+  "short_name": "xflarmy.com",
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest",
+  "background_color": "#cd0e00",
+  "icons": [
+    {
+      "src": "assets/inicio/icon.png",
+      "type": "image/png",
+      "sizes": "469x469"
+    }
+  ]
+}

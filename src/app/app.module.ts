@@ -8,6 +8,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { BarComponent } from './components/bar/bar.component';
 import { ChessComponent } from './components/chess/chess.component';
 
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { ChessComponent } from './components/chess/chess.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

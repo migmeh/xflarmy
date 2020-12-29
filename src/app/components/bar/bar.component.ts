@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {faCoffee} from '@fortawesome/free-solid-svg-icons';
 declare var $: any;
 @Component({
   selector: 'app-bar',
@@ -9,7 +10,7 @@ declare var $: any;
 
 export class BarComponent implements OnInit {
 
-
+  faCoffee = faCoffee;
   constructor() {
 
 

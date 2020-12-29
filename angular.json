@@ -25,7 +25,10 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/manifest.json",
               "src/assets",
+              "src/robots.txt",
+              "src/sitemap.xml",
               {
                 "glob": "**/*",
                 "input": "node_modules/chessboardjs/www/releases/0.3.0/img",
