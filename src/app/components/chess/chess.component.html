@@ -1,9 +1,13 @@
-<div class=" alert alerta-game alert-warning alert-dismissible fade show" role="alert" >
 
-  <p>
+
+<div class=" alert alerta-gameDos alert-warning alert-dismissible fade show" role="alert" >
+  <a class="navbar-brand" routerLink="/" data-toggle="modal"><img src="/assets/inicio/log-white.png" height="70"/></a>
+
+ <!-- <p>
     <strong>Attention: </strong>this game is in development.
-  </p>
+  </p>-->
 </div>
+
 
 
 
@@ -20,9 +24,31 @@
 
 <div id="chessboard" role="main"style="margin:0px auto; max-width: 600px;"></div>
 
-<div id="gameover" class="alert alerta-game alert-primary hide" role="alert"><strong></strong></div>
+<div id="gameover" style="display: none;" class="alert alerta-game alert-primary hide" role="alert"><strong>checkmate !</strong></div>
 <!--<div id="restart" class="restartGame">
   <button type="button" class="btn medium btn-danger btn-xlarge">Restart</button>
 </div>-->
+
+
+
+<div class="modal fade" id="hacke" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Checkmate !</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="color:#dddddd;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Checkmate !
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn enviarC" routerLink="/"  data-dismiss="modal">Exit</button>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
