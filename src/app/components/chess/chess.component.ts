@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as ChessBoard from 'chessboardjs/www/js/chessboard';
+import {Title, Meta} from '@angular/platform-browser';
 declare var $: any;
 
 
@@ -14,20 +15,36 @@ export class ChessComponent implements OnInit {
   board: any;
   game: any;
 
-  constructor() { }
+  ///////meta
+  constructor(private titleService: Title,
+              private metaTagService: Meta) {
 
+  }
+///////meta
 
-  setDepth(depth){
+ /* setDepth(depth){
    // console.log('este es el ' + depth);
     document.getElementById('difficulty').style.display = 'none';
     document.getElementById('chessboard').style.display = 'block';
     document.getElementById('restart').style.display = 'block';
    // console.log(depth);
     // this.minimaxDepth = depth;
-  }
+  }*/
 
+   ngOnInit(){
+     this.titleService.setTitle("Chess online");
+    this.metaTagService.addTags([
+      { name: 'twitter:image', content: 'assets/chess/chess.png' },
+      { name: 'og:image', content: 'assets/chess/chess.png'},
 
-  ngOnInit() {
+      { name: 'twitter:title', content: 'Play chess online' },
+      { name: 'og:title', content: 'Play chess online' },
+
+      { name: 'twitter:description', content: 'Now you can play chess online and find out if you are smarter than AI' },
+      { name: 'ogg:description', content: 'Now you can play chess online and find out if you are smarter than AI' },
+      { charset: 'UTF-8' }
+    ]);
+
 ////////////////////////// 7
 
    // this.minimaxDepth = 2;
