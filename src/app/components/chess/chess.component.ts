@@ -70,8 +70,6 @@ export class ChessComponent implements OnInit {
 
       if (this.game.in_checkmate() === true || this.game.in_draw() === true || this.game.game_over() === true ) {
 
-        document.getElementById('gameover').style.display = 'block';
-
         $('#hacke').modal('show');
         return false;
       }
@@ -345,9 +343,8 @@ export class ChessComponent implements OnInit {
       onDrop: onDrop,
       onMouseoutSquare: onMouseoutSquare,
       onMouseoverSquare: onMouseoverSquare,
-      onSnapEnd: onSnapEnd,
-      onDragStart: this.onDragStart.bind( this )
-    };
+      onSnapEnd: onSnapEnd
+      };
 
 
     this.board = new ChessBoard( 'chessboard', config );
@@ -358,15 +355,6 @@ export class ChessComponent implements OnInit {
   }
 
 
-  // do not pick up pieces if the game is over
-  // only pick up pieces for White
-  onDragStart(source, piece, position, orientation){
-    if (this.game.in_checkmate() === true || this.game.in_draw() === true || this.game.game_over() === true ) {
-      console.log("checkmate !");
-      //document.getElementById('gameover').style.display = 'block';
-      return false;
-    }
-  }
 
 
 
