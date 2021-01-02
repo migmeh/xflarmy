@@ -12,18 +12,21 @@ export class MoonshotComponent implements OnInit {
               private metaTagService: Meta) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Moonshot game retro");
-    this.metaTagService.addTags([
-      { name: 'twitter:image', content: 'assets/images/moonshot.jpg' },
-      { name: 'og:image', content: 'assets/images/moonshot.jpg'},
+    this.titleService.setTitle("Moonshot game retro"); //titulo
 
-      { name: 'twitter:title', content: 'Moonshot game retro' },
-      { name: 'og:title', content: 'Moonshot game retro' },
+    this.metaTagService.updateTag({ name: 'twitter:image', content: 'https://xflarmy.com/assets/images/moonshot.jpg' });
+    this.metaTagService.updateTag({ property: 'og:image', content: 'https://xflarmy.com/assets/images/moonshot.jpg' });
 
-      { name: 'twitter:description', content: 'Enjoy an exquisite retro game while traveling through cyberspace' },
-      { name: 'ogg:description', content: 'Enjoy an exquisite retro game while traveling through cyberspace' },
-      { charset: 'UTF-8' }
-    ]);
+    this.metaTagService.updateTag({ name: 'twitter:title', content: 'Moonshot game retro' });
+    this.metaTagService.updateTag({ property: 'og:title', content: 'Moonshot game retro' });
+
+    this.metaTagService.updateTag({ name: 'twitter:description', content: 'Enjoy an exquisite retro game while traveling through cyberspace' });
+    this.metaTagService.updateTag({ property: 'og:description', content: 'Enjoy an exquisite retro game while traveling through cyberspace' });
+    this.metaTagService.updateTag({ property: 'description', content: 'Enjoy an exquisite retro game while traveling through cyberspace' });
+
+    this.metaTagService.updateTag({ name: 'keywords', content: 'Moonshot, game, retro, cyberspace' });
+    this.metaTagService.updateTag({ name: 'theme-color', content: '#4d3d66' });
+
 
 ////////////////////////// 7
   }

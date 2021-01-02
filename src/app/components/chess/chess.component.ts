@@ -32,20 +32,24 @@ export class ChessComponent implements OnInit {
   }*/
 
    ngOnInit(){
-     this.titleService.setTitle("Chess online");
-    this.metaTagService.addTags([
-      { name: 'twitter:image', content: 'assets/chess/chess.png' },
-      { name: 'og:image', content: 'assets/chess/chess.png'},
+     this.titleService.setTitle("Chess online"); //titulo
 
-      { name: 'twitter:title', content: 'Play chess online' },
-      { name: 'og:title', content: 'Play chess online' },
+     this.metaTagService.updateTag({ name: 'twitter:image', content: 'https://xflarmy.com/assets/chess/chess.png' });
+     this.metaTagService.updateTag({ property: 'og:image', content: 'https://xflarmy.com/assets/chess/chess.png' });
 
-      { name: 'twitter:description', content: 'Now you can play chess online and find out if you are smarter than AI' },
-      { name: 'ogg:description', content: 'Now you can play chess online and find out if you are smarter than AI' },
-      { charset: 'UTF-8' }
-    ]);
+     this.metaTagService.updateTag({ name: 'twitter:title', content: 'Play chess online' });
+     this.metaTagService.updateTag({ property: 'og:title', content: 'Play chess online' });
+
+     this.metaTagService.updateTag({ name: 'twitter:description', content: 'Now you can play chess online and find out if you are smarter than AI' });
+     this.metaTagService.updateTag({ property: 'og:description', content: 'Now you can play chess online and find out if you are smarter than AI' });
+     this.metaTagService.updateTag({ property: 'description', content: 'Now you can play chess online and find out if you are smarter than AI' });
+
+     this.metaTagService.updateTag({ name: 'keywords', content: 'Chess, game' });
+     this.metaTagService.updateTag({ name: 'theme-color', content: '#465162' });
+
 
 ////////////////////////// 7
+
 
    // this.minimaxDepth = 2;
 
@@ -96,7 +100,7 @@ export class ChessComponent implements OnInit {
       let bestMoveFound;
       const minimaxDepth = 0; // cambiar este para los niveles ewe max 2
 
-      for (let i = 0; i < possibleNextMoves.length; i++) {
+      for(let i = 0; i < possibleNextMoves.length; i++) {
         const possibleNextMove = possibleNextMoves[i];
         this.game.move(possibleNextMove);
         const value = minimax(minimaxDepth, -10000, 10000, false); // here cambiar el 1 por 2 o 0
