@@ -1,21 +1,34 @@
 {
-  "hosting": {
-    "public": "dist/Angular",
-    "rewrites": [ {
-      "source": "**",
-      "destination": "/index.html"
-    } ],
-
-
-    "headers": [ {
-
-      "source": "**/*.@(jpg|psd)",
-      "headers": [ {
-        "key": "Access-Control-Allow-Origin",
-        "value": "*"
-      } ]
-    }]
+  "hosting": [
+    {
+      "site": "xflarmy",
+      "public": "dist/Angular/dist/Angular/browser",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(jpg|psd)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "ssr"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "source": "dist/Angular"
   }
 }
-
-
