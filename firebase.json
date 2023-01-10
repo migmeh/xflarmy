@@ -2,7 +2,7 @@
   "hosting": [
     {
       "site": "xflarmy",
-      "public": "dist/Angular/dist/Angular/browser",
+      "public": "dist/Angular/browser",
       "rewrites": [
         {
           "source": "**",
