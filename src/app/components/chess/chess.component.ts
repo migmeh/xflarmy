@@ -15,6 +15,7 @@ export class ChessComponent implements OnInit {
   board: any;
   game: any;
 
+  //myvariable :any;
   ///////meta
   constructor(private titleService: Title,
               private metaTagService: Meta) {

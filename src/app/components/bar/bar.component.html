@@ -1,14 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" routerLink="/" data-toggle="modal"><img src="/assets/inicio/flame-svg.png" height="70"/></a>
+<nav [ngClass]="{'bg-light' : queGame==''}" class="navbar  barra-gameChess navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/" data-toggle="modal">
+    <img *ngIf="queGame==''" src="/assets/inicio/flame-svg.png" height="70"/>
+    <img *ngIf="queGame!=''" src="/assets/inicio/log-white.png" height="70"/>
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link active mymenu" href="https://www.youtube.com/channel/UCv-6sBYWpyZA6jCHxCfHjGw/videos"><img src="assets/inicio/youtube.svg" height="35"/> Youtube</a>
-      <a class="nav-link active mymenu" href="https://discord.gg/ddJ7Ar2MQ3"><img src="assets/inicio/pokediscord.svg" height="35"/> Discord</a>
+      <a [ngStyle]="{'color': (queGame!='') ? 'white' : 'black' }" class="nav-link active mymenu" href="https://www.youtube.com/channel/UCv-6sBYWpyZA6jCHxCfHjGw/videos">
+        <img *ngIf="queGame==''" src="assets/inicio/youtube.svg" height="35"/>
+        <img *ngIf="queGame!=''" src="assets/inicio/youtubeWhite.svg" height="35"/>
+        Youtube
+      </a>
+      <a [ngStyle]="{'color': (queGame!='') ? 'white' : 'black' }" class="nav-link active mymenu" href="https://discord.gg/97ajFJtugf">
+        <img  *ngIf="queGame==''" src="assets/inicio/discord.svg" height="35"/> 
+        <img  *ngIf="queGame!=''" src="assets/inicio/discordWhite.svg" height="35"/> 
+        
+        Discord</a>
 
-      <a class="nav-link active mymenu" href="https://twitter.com/xflarmy"><img src="assets/inicio/twitter.svg" height="35"/> Twitter</a>
+      <a [ngStyle]="{'color': (queGame!='') ? 'white' : 'black' }" class="nav-link active mymenu" href="https://twitter.com/xflarmy">
+        <img *ngIf="queGame==''" src="assets/inicio/twitter.svg" height="35"/> 
+        <img *ngIf="queGame!=''" src="assets/inicio/twitterWhite.svg" height="35"/> 
+        Twitter</a>
 
 
 
