@@ -1,34 +1,31 @@
 {
-  "hosting": [
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": [
     {
-      "site": "xflarmy",
-      "public": "dist/Angular/browser",
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
+      "source": "dist/Angular",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
       ],
-      "headers": [
-        {
-          "source": "**/*.@(jpg|psd)",
-          "headers": [
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            }
-          ]
-        }
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "function": "ssr"
-        }
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
       ]
     }
-  ],
-  "functions": {
-    "source": "dist/Angular"
-  }
+  ]
 }
