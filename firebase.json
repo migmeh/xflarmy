@@ -1,17 +1,10 @@
 {
   "hosting": {
-    "site": "xflarmy",
     "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "function" : "ssr"
-      }
     ]
   },
   "functions": [
