@@ -1,14 +1,5 @@
 {
   "projects": {
     "default": "xflarmy"
-  },
-  "targets": {
-    "xflarmy": {
-      "hosting": {
-        "Angular": [
-          "xflarmy"
-        ]
-      }
-    }
   }
 }
