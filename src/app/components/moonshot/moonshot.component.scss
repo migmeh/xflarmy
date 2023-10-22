@@ -48,7 +48,7 @@
   align-items: center;
 }
 .controles{display:none;}
-@media screen and (max-width:530px) and (min-width:10px){
+
   .controles{display:block;}
   .controles{
     width:100%;
@@ -81,7 +81,7 @@
 
 
 
-}
+
 @media screen and (max-width:400px) and (min-width:10px){
 
   .contenedor_creditos, .logoImagen{width:100%; }

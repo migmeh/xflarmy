@@ -507,6 +507,8 @@ var game = (function () {
     document.getElementById("audioUno").pause();
     document.getElementById("audioDos").pause();
     document.getElementById("audios").innerHTML="";
+
+
   }
 
   function showCongratulations () {

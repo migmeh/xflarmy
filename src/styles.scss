@@ -1,3 +1,15 @@
+body {
+  overscroll-behavior: none;
+
+  font-family: Century Gothic, Arial;
+  font-size: 1.5em;
+  background-color: #2b2b2b !important;
+  background-position:top center;
+  background-attachment:fixed;
+  background-size:cover;
+  background-repeat:no-repeat;
+  color:#bababa;
+}
 *{border:0px; margin:0px; padding:0px; box-sizing: border-box;}
 a:link{text-decoration: none;}
 a:visited{text-decoration: none;}
@@ -14,16 +26,6 @@ a:active{text-decoration: none;}
 .cookieInfo{float:right; width:80%;}
 
 
-body{
-  font-family: Century Gothic, Arial;
-  font-size: 1.5em;
-  background-color: #2b2b2b !important;
-  background-position:top center;
-  background-attachment:fixed;
-  background-size:cover;
-  background-repeat:no-repeat;
-  color:#bababa;
-}
 
 
 .cookie-modal-content{background-color:rgb(255,255,255,0.9); color:#2b2b2b!important;}
